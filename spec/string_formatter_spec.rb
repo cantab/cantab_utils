@@ -4,7 +4,7 @@ describe "String formatting" do
 
   let(:string) { "The rain in Spain - 2nd Edition with    multiple spaces.pdf" }
 
-  describe CantabUtils::StringFormatter do
+  describe Cantab::StringFormatter do
 
     it "has a such a class" do
       expect(described_class).to_not be_nil

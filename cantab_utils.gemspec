@@ -5,7 +5,7 @@ require 'cantab_utils/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "cantab_utils"
-  spec.version       = CantabUtils::VERSION
+  spec.version       = Cantab::VERSION
   spec.authors       = ["Chong-Yee Khoo"]
   spec.email         = ["mail@cykhoo.com"]
 

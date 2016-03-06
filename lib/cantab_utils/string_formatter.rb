@@ -1,4 +1,4 @@
-module CantabUtils
+module Cantab
 
   class StringFormatter
 

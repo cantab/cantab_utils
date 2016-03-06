@@ -4,7 +4,7 @@ describe "Date formatting" do
 
   let(:date) { Date.new(2000, 1, 1) }
 
-  describe CantabUtils::DateFormatter do
+  describe Cantab::DateFormatter do
 
     it "has a such a class" do
       expect(described_class).to_not be_nil
