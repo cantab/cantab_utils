@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Chong-Yee Khoo"]
   spec.email         = ["mail@cykhoo.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Useful utilities for formatting, etc.}
+  spec.description   = %q{Useful utilities for formatting, etc.}
+  spec.homepage      = "www.cantab-ip.com"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
@@ -28,4 +28,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec", "~> 3.4"
 end
