@@ -1,5 +1,5 @@
 require "cantab_utils/version"
 
 module CantabUtils
-  # Your code goes here...
+  require 'cantab_utils/date_formatter'
 end
