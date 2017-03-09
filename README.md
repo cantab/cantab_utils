@@ -1,8 +1,6 @@
-# Cantab
+# Cantab Utilities
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cantab_utils`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Useful utilities to format dates and strings.
 
 ## Installation
 
@@ -22,15 +20,73 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```Ruby
+require 'cantab_utils'
+```
 
-## Development
+The call the class methods on the appropriate formatter, `DateFormatter` or `StringFormatter`.
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+### DateFormatter Class Methods
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+### .to_long
+Outputs the date with four digit year, month spelt out in full and the day digit without leading zeros.
+
+```Ruby
+Cantab::DateFormatter.to_long(Date.new(2017,3,9))
+=> "9 March 2017"
+```
+
+### .to_long
+As with `DateFormatter.to_long`, but separated by dashes.
+
+```Ruby
+Cantab::DateFormatter.to_long_dash(Date.new(2017,3,9))
+=> "9-March-2017"
+```
+
+### .to_slash
+Outputs the date with four digit year, month and day digits separated by slashes, without leading zeros.
+
+```Ruby
+Cantab::DateFormatter.to_slash(Date.new(2017,3,9))
+=> "9/3/2017"
+```
+
+### .date_months_after
+Takes a date and an Integer, outputs the date that is the number of months after that date.
+
+```Ruby
+Cantab::DateFormatter.date_months_after(Date.new(2017,3,9), 5)
+=> #<Date: 2017-08-09 ((2457975j,0s,0n),+0s,2299161j)>
+
+Cantab::DateFormatter.date_months_after(Date.new(2017,3,9), 5).to_s
+=> "2017-08-09"
+```
+
+### StringFormatter Class Methods
+
+### .parameterize
+
+Acts like ActiveSupport::Inflector's `parameterize` method. Replaces special characters in a string so that it may be used as part of a 'pretty' URL.
+
+```Ruby
+Cantab::StringFormatter.parameterize("The rain in Spain stays mainly in the plain")
+=> "The-rain-in-Spain-stays-mainly-in-the-plain"
+```
 
 ## Contributing
+Feel free to drop us a line to let us know you would like to work on something or if you have an idea. Otherwise, fork, code, commit, push and create pull request, *viz*:
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/cantab_utils.
+1. Create a fork of the repo.
+2. Create your feature branch (`git checkout -b new-feature`).
+2. Write some tests (in RSpec, if you please).
+3. Write the code that allows the tests to pass.
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin new-feature`).
+5. Create a new [Pull Request] (https://help.github.com/articles/using-pull-requests).
 
+More details on how to contribute can be found at this great Thoughtbot blogpost [8 (new) steps for fixing other people's code] (http://robots.thoughtbot.com/8-new-steps-for-fixing-other-peoples-code).
+
+## Copyright
+
+Copyright (c) 2017 Chong-Yee Khoo
