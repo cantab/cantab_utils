@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Useful utilities for formatting, etc.}
   spec.description   = %q{Useful utilities for formatting, etc.}
-  spec.homepage      = "www.cantab-ip.com"
+  spec.homepage      = "https://www.cantab-ip.com"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
