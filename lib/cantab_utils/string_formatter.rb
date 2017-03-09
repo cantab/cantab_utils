@@ -4,7 +4,7 @@ module Cantab
 
     class << self
 
-      def parametize(string)
+      def parameterize(string)
         re_sep = Regexp.escape("-")
         string.gsub(/[^A-Za-z0-9\-_.]+/, "-").gsub(/#{re_sep}{2,}/, "-")
       end

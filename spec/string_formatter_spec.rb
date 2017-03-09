@@ -12,8 +12,8 @@ describe "String formatting" do
 
     describe "methods" do
 
-      it "has a parametize method" do
-        expect(described_class).to respond_to(:parametize)
+      it "has a parameterize method" do
+        expect(described_class).to respond_to(:parameterize)
       end
     end
 
@@ -22,7 +22,7 @@ describe "String formatting" do
       describe "convert string to dashed format" do
 
         it "method converts string" do
-          expect(described_class.parametize(string)).to eq("The-rain-in-Spain-2nd-Edition-with-multiple-spaces.pdf")
+          expect(described_class.parameterize(string)).to eq("The-rain-in-Spain-2nd-Edition-with-multiple-spaces.pdf")
         end
       end
     end
