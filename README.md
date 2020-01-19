@@ -24,7 +24,7 @@ Or install it yourself as:
 require 'cantab_utils'
 ```
 
-The call the class methods on the appropriate formatter, `DateFormatter` or `StringFormatter`.
+Then call the class methods on the appropriate formatter, `DateFormatter` or `StringFormatter`.
 
 ### DateFormatter Class Methods
 
@@ -36,7 +36,7 @@ Cantab::DateFormatter.to_long(Date.new(2017,3,9))
 => "9 March 2017"
 ```
 
-### .to_long
+### .to_long_dash
 As with `DateFormatter.to_long`, but separated by dashes.
 
 ```Ruby
