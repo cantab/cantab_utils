@@ -1,4 +1,5 @@
 # Cantab Utilities
+![Ruby](https://github.com/cantab/cantab_utils/workflows/Ruby/badge.svg)
 
 Useful utilities to format dates and strings.
 
